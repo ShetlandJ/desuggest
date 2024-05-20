@@ -1,0 +1,25 @@
+{
+  "name": "Desuggest",
+  "description": "Stop seeing Suggested posts on LinkedIn.",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "execute.js will run (watch the Chrome DevTools' console)"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_idle",
+      "js": ["desuggest.js"],
+      "matches": [
+        "https://www.linkedin.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ]
+}
