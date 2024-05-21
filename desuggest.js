@@ -1,6 +1,6 @@
 (function () {
   function hideSuggestedTextBlocks(article) {
-    if (article.innerText === 'Suggested') {
+    if (article.innerText === 'Suggested' || article.innerText.includes('Expert answers on')) {
       let outerWrapper = article.closest('.feed-shared-update-v2.feed-shared-update-v2--minimal-padding.full-height.relative');
       if (outerWrapper) {
         outerWrapper.style.display = 'none';
